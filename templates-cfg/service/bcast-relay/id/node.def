@@ -11,8 +11,8 @@ val_help: u32:1-99; Numerical ID #
 comp_help: Make sure that the ID # is unique for each network.
 
 end: if [[ "$COMMIT_ACTION" == "DELETE" ]]; then
-		sudo /config/scripts/ubnt-bcast-relay.pl --stop;
+		sudo /opt/vyatta/sbin/ubnt-bcast-relay.pl --stop;
 	else
-		sudo /config/scripts/ubnt-bcast-relay.pl --update;
+		sudo /opt/vyatta/sbin/ubnt-bcast-relay.pl --update;
 	fi
 
