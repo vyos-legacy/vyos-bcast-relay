@@ -1,0 +1,18 @@
+tag:
+priority: 990
+type: u32
+
+help: A unique ID # for each network that udp-bcast-relay listens on
+
+syntax:expression: $VAR(@) > 0 && $VAR(@) <= 99 ; \
+	"ID number must be in range 1 to 99"
+
+val_help: u32:1-99; Numerical ID #
+comp_help: Make sure that the ID # is unique for each network.
+
+end: if [[ "$COMMIT_ACTION" == "DELETE" ]]; then
+		sudo /config/scripts/ubnt-bcast-relay.pl --stop;
+	else
+		sudo /config/scripts/ubnt-bcast-relay.pl --update;
+	fi
+

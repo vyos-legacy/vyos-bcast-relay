@@ -1,0 +1,6 @@
+vyos-bcast-relay (0.1.0+vyos2+current1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Christian Poessinger <christian@poessinger.com>  Sat, 02 Sep 2017 23:51:00 +0000
+

@@ -1,0 +1,26 @@
+This package has VyOS UDP Broadcast Packet Relay configuration templates and
+scripts.
+
+Available configuration nodes:
+
+bcast-relay {
+    id 1 {
+        description "Foo"
+            interface eth1
+            interface eth2
+            interface eth3
+            port 1900
+    }
+    id 2 {
+        description "Bar"
+            interface eth1
+            interface eth3
+            port 6969
+    }
+}
+
+Source and configuration files/scripts have been aggregated from:
+  * https://github.com/nomeata/udp-broadcast-relay/
+  * https://github.com/britannic/ubnt-bcast-relay
+
+  Thank you Guys!

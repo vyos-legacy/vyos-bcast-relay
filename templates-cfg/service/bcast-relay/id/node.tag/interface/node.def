@@ -1,0 +1,7 @@
+multi:
+type: txt
+help: Interface to repeat UDP broadcasts to [REQUIRED]
+
+allowed: /usr/sbin/ubnt-ifctl list-sys-intfs all
+
+commit:expression: exec "/usr/sbin/ubnt-ifctl valid-intf $VAR(@) all error"

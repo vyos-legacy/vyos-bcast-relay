@@ -1,0 +1,7 @@
+The Debian Package vyos-bcast-relay
+-----------------------------------
+
+This package contains the vyos-bcast-relay project developed by 
+Christian Poessinger. This package includes the programs, plus cli commands.
+
+ -- Christian Poessinger <christian@poessinger.com>  Sat, 02 Sep 2017
