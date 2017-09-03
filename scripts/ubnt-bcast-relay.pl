@@ -142,7 +142,8 @@ sub restart_daemon {
   my $cfg = shift;
   stop_daemon($cfg);
 
-  for my $relay ( keys $cfg->{relays} ) {
+  my $hrly = $cfg->{relays};
+  for my $relay ( keys %$hrly ) {
     my $file = $pid_file . q{.} . ${relay} . q{.pid};
     my $cmd
       = qq{start-stop-daemon --start --quiet --background }
@@ -160,7 +161,8 @@ sub restart_daemon {
 sub stop_daemon {
   my $cfg = shift;
 
-  for my $relay ( keys $cfg->{relays} ) {
+  my $hrly = $cfg->{relays};
+  for my $relay ( keys %$hrly ) {
     my $file = $pid_file . q{.} . ${relay} . q{.pid};
     if ( -f $file ) {
       my $cmd = q{start-stop-daemon --quiet --stop --oknodo --pidfile } . $file;
